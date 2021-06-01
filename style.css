@@ -1,0 +1,565 @@
+@charset "utf-8";
+body {
+    background-color:#FBFAF6;
+    font-family: 'klee','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+/* 共通 */
+
+section {
+    margin-bottom: 15rem;
+}
+
+.textbox {
+    padding: 3rem;
+    background-color:#fff;
+}
+
+.decolation {
+    object-fit: contain;
+    width: 30%;
+    position: relative;
+    z-index: -10;
+}
+
+/* header部分 */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    color: white;
+}
+
+header nav {
+    float: right;
+    margin-right: 3%;
+}
+
+header nav ul {
+    writing-mode: vertical-rl;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ハンバーガーメニュー */ 
+
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	cursor: pointer;
+    width: 60px;
+    height:60px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+	background: #fff;
+  	width: 60%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;/*真ん中の線は透過*/
+} 
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40%;
+}
+
+.humburger {
+    position: absolute;
+    top: 0;
+    right:0;
+    margin-top: 1rem;
+    display: none;
+    z-index: 15;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.sp-mainmenu {
+    position: fixed;
+    position: absolute;
+    background-color:rgba(31,67,79,85%);
+    top: 0;
+    left: 0;
+    /* right: -100%; */
+    /* opacity: 0; */
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    /* transform: translateX(-200px); */
+    transition: opacity 0.5s,transform 0.5s;
+}
+
+.active {
+    display: block;
+    /* opacity: 1; */
+}
+
+.openmenu {
+    position: relative;
+    color: #fff;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    text-align: center;
+}
+
+.openmenu img {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.spmenu {
+    margin:0 auto
+}
+
+@media screen and (max-width: 768px){
+    .nav-list {
+        display: none;
+    }
+    
+    .humburger {
+        display: block;
+    }
+
+    header nav ul li {
+        margin-left: 10%;
+    }
+
+}
+
+
+
+/* メインビジュアル */
+#mainvisual {
+    object-fit: contain;
+    width: 100%;
+    max-width: 100%;
+    position:relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-bottom: 15%;
+}
+
+/* about部分 */
+
+#about {
+    position: relative;
+    margin-bottom: 18rem;
+    width: 100%;
+    height: 100vh;
+}
+
+#about h1 {
+    writing-mode: vertical-rl;
+    margin: 0 10% -3rem auto;
+}
+
+
+#about .aboutimg {
+    object-fit: contain;
+    width: 65%;
+    float: right;
+}
+
+.about-text {
+    writing-mode: vertical-rl;
+    text-align: justify;
+    margin-left: 10%;
+    font-size: 1.1rem;
+    height: 40%;
+    line-height: 2.2;
+    position: absolute; 
+    top: 50%;
+} 
+
+.cloud-decoration {
+    width: 320px;
+    max-width: 45%;
+    position: absolute;
+    top: 90%;
+    right: 0;
+}
+
+/* お知らせ部分 */
+
+.info-text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.info-text h1 {
+    margin-left: 2rem;
+}
+
+.info-text ul li {
+    list-style-type: none;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid #E4DCBF;
+    padding-bottom: 0.5rem;
+
+}
+
+.viewinfo-button {
+    text-align: right;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.arrow{
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    color: #000;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 15px;
+}
+.arrow::before,
+.arrow::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+.arrow-style::before{
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #1F434F;
+}
+.arrow-style::after{
+    left: 3px;
+    width: 3px;
+    height: 3px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+/* 商品紹介 */
+
+#product-info {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 25%;
+}
+
+.productinfo-titlearea {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+
+#product-info h1 {
+    writing-mode: vertical-rl;
+    margin: 0 10% 0 auto;
+}
+
+#chidori {
+    width: 320px;
+    max-width: 45%;
+    margin-top: -10rem;
+}
+
+
+
+.item-list {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 15%;
+}
+
+.item-box {
+    width: 30%;
+    height: 50vh;
+    position: relative;
+    margin-left: 2rem;
+}
+
+.item-box img {
+    object-fit: contain;
+    max-width: 70%;
+    position: absolute;
+    top: 70%;
+    left: -20%;
+}
+
+.item-text {
+    width: 25%;
+    height: 70%;
+    margin-right: 0;
+}
+
+.item-text p {
+    writing-mode: vertical-rl;
+    text-align: right;
+}
+
+
+.view-product {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* shopinfo */
+#shop-info {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 50%;
+}
+
+.shopinfo-position {
+    position: relative;
+    height: 80%;
+    /* 100vhの80% */
+}
+
+#shop-info #koshi {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#shop-info h1 {
+    writing-mode: vertical-rl;
+    margin: 0 10% 15% auto;
+}
+
+#shop-info #shopimg {
+    object-fit: contain;
+    width: 65%;
+
+}
+
+.shop-text{
+    margin-left: 30%;
+    margin-bottom: 10rem;
+    width: 50%;
+    max-height: 43%;
+    margin-top: -2rem;
+} 
+
+/* footer */
+footer {
+    background-color: #1F434F;
+    display: flex;
+    padding: 3rem 0;
+}
+
+.footer-logo {
+    width: 40%;
+    border-right: solid 1px #fff;
+    position: relative;
+}
+
+.footer-logo img {
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.footer-content {
+    width: 45%;
+    font-size: 1.2rem;
+    color: #fff;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+/* SP用 */
+
+@media screen and (max-width: 768px){
+    /* about部分 */
+    
+    .textbox {
+        padding: 2rem;
+    }
+    
+    #about {
+        position: relative;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    #about　h1 {
+        margin: 0 auto;
+        margin-bottom: -5rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    #about .aboutimg {
+        width: 100%;
+        z-index: 0;
+        margin-bottom: 1rem;
+    }
+
+    .about-text{
+        writing-mode: horizontal-tb;
+        position: static;
+        font-size: normal;
+        width: 80%;
+        margin: 0 auto;
+        line-height: normal;
+        margin-bottom: 3rem;
+    }
+
+    .float-clear {
+            clear:  both;         
+    }
+
+    #info {
+        margin-bottom: 3rem;
+    }
+
+    .cloud-decoration {
+        max-width: 45%;
+        position: static;
+        margin-bottom: 3rem;
+        float: right;
+    }
+
+    .info-text {
+        width: 80%;
+    }
+
+    #product-info {
+        margin-bottom: 3rem;
+    }
+
+    #product-info h1 {
+        padding-top: 3rem;
+    }
+
+    #chidori {
+        margin-top: 0;
+        width: 45%;
+    }
+
+    .item-list {
+        width: 80%;
+        margin-bottom: 0;
+    }
+
+    .item-text {
+        height: 50%;
+    }
+
+    .item-box {
+        height: 42vh;
+    }
+
+    .item-box img {
+        width: 100%;
+        max-width: none;
+        top: 50%;
+    }
+
+    #shop-info {
+        height: auto;
+        margin-bottom: 5rem;
+    }
+
+    #shop-info #shopimg {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .shop-text{
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        width: 80%;
+        max-height: none;
+        margin-top: 0;
+    } 
+    
+    footer {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .footer-logo {
+        order: 1;
+        border-right: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        position: static;
+        width: 50%;
+    }
+
+    .footer-content {
+        width: 80%;
+        font-size: normal;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}

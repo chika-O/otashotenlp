@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>太田商店</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+       <header>
+           <nav>
+               <div class="nav-list">
+                    <ul>
+                        <li><a href="#about">太田商店について</a></li>
+                        <li><a href="#info">お知らせ</a></li>
+                        <li><a href="#product-info">商品のご紹介</a></li>
+                        <li><a href="#shop-info">店舗のご紹介</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+               <!-- ハンバーガーメニュー -->
+               <div class="humburger">
+                    <button>
+                        <div class="openbtn"><span></span><span></span><span></span></div>
+                    </button>   
+                </div>
+
+                <div class="sp-mainmenu">
+                    <div class="openmenu">
+                        <img src="images/otashotenlogo-white.png" alt="太田商店ロゴ">
+                        <ul class="spmenu">
+                            <li><a href="#about">太田商店について</a></li>
+                            <li><a href="#info">お知らせ</a></li>
+                            <li><a href="#product-info">商品のご紹介</a></li>
+                            <li><a href="#shop-info">店舗のご紹介</a></li>
+                            <li><a href="#contact">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+           
+            </nav>
+       </header>
+       <main>
+           <img src="images/mainvisual.png" alt="太田商店メインビジュアル" id="mainvisual">
+            
+           <section id="about">
+               <h1>太田商店について</h1>
+                    <img src="images/kutani-img.png" alt="楓イメージ" class="aboutimg">
+                    <div class="about-text textbox float-clear">
+                        <p>
+                            呉服屋で鍛えた初代による創業より六十余年。<br>
+                            雁木通りの骨董品屋として<br>
+                            町とともに歩んでまいりました。<br>
+                            代替わりを経て、<br>
+                            現在は骨董好きの女主人が<br>
+                            お待ちしております。<br>
+                            これからも、雁木通りとともに。
+                        </p>
+                    </div>
+                    <img src="images/kumo.png" alt="雲のあしらい" class="decolation cloud-decoration">
+            </section>
+
+            <section id="info">
+                <div class="info-text textbox float-clear">
+                    <h1>お知らせ</h1>
+                    <ul>
+                        <li>2021.03.06 新商品について</li>
+                        <li>2021.03.01 3月の休業日のお知らせ</li>
+                        <li>2021.02.22 オンラインショップ出品のお知らせ</li>
+                        <li>2021.02.21 2月の休業日について</li>
+                    </ul>
+                    <p class="viewinfo-button"><a href="#" class="arrow arrow-style">お知らせ一覧へ</a></p>
+                </div>
+            </section>
+
+            <section id="product-info">
+                <div class="productinfo-titlearea">
+                        <img src="images/chidori-ashirai.png" alt="千鳥のあしらい" class="decolation" id="chidori">
+                    <h1>商品のご紹介</h1>
+                </div>
+                    <div class="item-list">
+                        <div class="item-box">
+                            <div class="item-text textbox"><p>九谷焼金魚盃</p></div>
+                            <img src="images/ECimage2.png" alt="九谷焼金魚盃">
+                        </div>
+                        <div class="item-box middle-box">
+                            <div class="item-text textbox"><p>九谷焼金魚盃</p></div>
+                            <img src="images/ECimage1.png" alt="九谷焼金魚盃">
+                        </div>
+                        <div class="item-box">
+                            <div class="item-text textbox"><p>九谷焼金魚盃</p></div>
+                            <img src="images/ECimage3.png" alt="九谷焼金魚盃">
+                        </div>
+                    </div>
+                
+                <p class="view-product"><a href="#" class="arrow arrow-style">商品をもっと見る</a></p>
+            </section>
+
+            <section id="shop-info">
+                <img src="images/koshi-ashirai.png" alt="格子のあしらい" class="decolation" id="koshi">
+                <h1>店舗のご紹介</h1>
+                <div class="shopinfo-position">
+                    <img src="images/shop-img.png" alt="店舗イメージ" id="shopimg">
+                    <div class="shop-text textbox">
+                        <p>〒123-4567-8910　京都府京都市上京区版田町1-7-49</p>
+                        <p>駐車場あり</p>
+                        <p>営業時間：9:00 ~ 18:00</p>
+                        <p>TEL：012-345-6789</p>
+                        <p>MAIL：info@mail.com</p>
+                        <p>定休日：日・祝（※観桜会開催期間は休まず営業)</p>
+
+                    </div>
+                </div>
+            </section>
+       </main>
+       <footer id="contact">
+           <div class="footer-logo">
+                <img src="images/otashotenlogo-white.png" alt="太田商店ロゴ">
+           </div>
+           <div class="footer-content">
+                <p>お問い合わせは以下の宛先にて<br>
+                    お待ちしております。</p>
+                <p>TEL：012-345-678</p>
+                <p>MAIL：info@mail.com</p>
+           </div>
+       </footer> 
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--自作-->
+        <script src="js/otalp.js"></script>
+</body>
+    </body>
+</html>
