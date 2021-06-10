@@ -2,11 +2,15 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=1024" />
         <title>太田商店</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-       <header>
+       <header class="header">
+           <div class="header-logo">
+               <h1>太田商店</h1>
+           </div>
            <nav>
                <div class="nav-list">
                     <ul>
@@ -44,7 +48,7 @@
            <img src="images/mainvisual.png" alt="太田商店メインビジュアル" id="mainvisual">
             
            <section id="about">
-               <h1>太田商店について</h1>
+               <h1 class="title">太田商店について</h1>
                     <img src="images/kutani-img.png" alt="楓イメージ" class="aboutimg">
                     <div class="about-text textbox float-clear">
                         <p>
@@ -64,10 +68,10 @@
                 <div class="info-text textbox float-clear">
                     <h1>お知らせ</h1>
                     <ul>
-                        <li>2021.03.06 新商品について</li>
-                        <li>2021.03.01 3月の休業日のお知らせ</li>
-                        <li>2021.02.22 オンラインショップ出品のお知らせ</li>
-                        <li>2021.02.20 2月の休業日について</li>
+                        <li><a href="#">2021.03.06 商品の入荷について</a></li>
+                        <li><a href="#">2021.03.01 3月の休業日のお知らせ</a></li>
+                        <li><a href="#">2021.02.22 オンラインショップ出品のお知らせ</a></li>
+                        <li><a href="#">2021.02.20 2月の休業日について</a></li>
                     </ul>
                     <p class="viewinfo-button"><a href="#" class="arrow arrow-style">お知らせ一覧へ</a></p>
                 </div>
@@ -76,10 +80,10 @@
             <section id="product-info">
                 <div class="productinfo-titlearea">
                         <img src="images/chidori-ashirai.png" alt="千鳥のあしらい" class="decolation" id="chidori">
-                    <h1>商品のご紹介</h1>
+                    <h1 class="title">商品のご紹介</h1>
                 </div>
                     <div class="item-list">
-                        <div class="item-box">
+                        <!-- <div class="item-box">
                             <div class="item-text textbox"><p>九谷焼金魚盃</p></div>
                             <img src="images/ECimage2.png" alt="九谷焼金魚盃">
                         </div>
@@ -90,40 +94,72 @@
                         <div class="item-box">
                             <div class="item-text textbox"><p>九谷焼金魚盃</p></div>
                             <img src="images/ECimage3.png" alt="九谷焼金魚盃">
+                        </div> -->
+
+
+                        <img src="images/ECimage2.png" alt="九谷焼金魚盃" class="item-img">
+                        <div class="item-text">
+                                <p>九谷焼金魚盃<br>
+                                3,000円
+                                </p>
+                        </div>
+                        <div class="item-text">
+                                <p>出石焼抹茶椀<br>
+                                3,500円</p>
+                        </div>
+                        <img src="images/ECimage1.png" alt="九谷焼金魚盃" class="item-img">
+                        <img src="images/ECimage3.png" alt="出石焼抹茶椀" class="item-img">
+                        <div class="item-text">
+                                <p>昭和天皇生誕祝漆皿<br>
+                                3,000円</p>
                         </div>
                     </div>
                 
-                <p class="view-product"><a href="#" class="arrow arrow-style">商品をもっと見る</a></p>
+                <p class="view-product viewbutton"><a href="#" class="arrow arrow-style">商品をもっと見る</a></p>
             </section>
 
             <section id="shop-info">
-                <img src="images/koshi-ashirai.png" alt="格子のあしらい" class="decolation" id="koshi">
-                <h1>店舗のご紹介</h1>
-                <div class="shopinfo-position">
+                <!-- s<img src="image/koshi-ashirai.png" alt="格子のあしらい" class="decolation" id="koshi"> -->
+                <h1 class="title">店舗のご紹介</h1>
+                <div class="shopinfo-main">
                     <img src="images/shop-img.png" alt="店舗イメージ" id="shopimg">
-                    <div class="shop-text textbox">
-                        <p>〒123-4567-8910　京都府京都市上京区版田町1-7-49</p>
-                        <p>駐車場あり</p>
-                        <p>営業時間：9:00 ~ 18:00</p>
-                        <p>TEL：012-345-6789</p>
-                        <p>MAIL：info@mail.com</p>
-                        <p>定休日：日・祝（※観桜会開催期間は休まず営業)</p>
-
+                    <div class="shop-text">
+                        <div class="shopinfo-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.163797977496!2d138.24545291468633!3d37.1012182583979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff6714a980e90ff%3A0x5d944d510a9f1ae1!2z44CSOTQzLTA4NDEg5paw5r2f55yM5LiK6LaK5biC5Y2X5pys55S677yT5LiB55uu77yW4oiS77yY!5e0!3m2!1sja!2sjp!4v1623161999702!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="shopinfo-text">
+                            <p>〒943-0841<br>
+                                新潟県上越市南本町3-6-8</p>
+                            <p>駐車場あり</p>
+                            <p>営業時間：9:00 ~ 18:00</p>
+                            <p>TEL：025-523-4422</p>
+                            <p><a href="mailto:info@example.com">MAIL：ohtamail@valley.ne.jp</a></p>
+                            <p>定休日：日・祝（※観桜会開催期間は休まず営業)</p>
+                        </div>
                     </div>
+                    <p class="mail-contact viewbutton"><a href="mailto:info@example.com" class="arrow arrow-style">メールでのお問い合わせはこちら</a></p>
                 </div>
             </section>
        </main>
-       <footer id="contact">
-           <div class="footer-logo">
-                <img src="images/otashotenlogo-white.png" alt="太田商店ロゴ">
-           </div>
-           <div class="footer-content">
-                <p>お問い合わせは以下の宛先にて<br>
-                    お待ちしております。</p>
-                <p>TEL：012-345-678</p>
-                <p>MAIL：info@mail.com</p>
-           </div>
-       </footer> 
+       <footer>
+            <div class="footer">
+                <div class="footer-content">
+                        <div class="footer-logo">
+                                <img src="images/otashotenlogo-white.png" alt="太田商店ロゴ">
+                        </div>
+                        <div class="footer-info">
+                                <p>お問い合わせは以下の宛先にて
+                                    お待ちしております。</p>
+                                <p>TEL：025-523-4422</p>
+                                <p class="mail-button"><a href="mailto:info@example.com">メールでのお問い合わせ</a></p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="copyright">
+                <span>©太田商店</span>
+            </div>
+        </footer>
        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <!--自作-->
         <script src="js/otalp.js"></script>

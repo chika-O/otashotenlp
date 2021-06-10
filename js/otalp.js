@@ -6,6 +6,22 @@ $('#page-link a[href*="#"]').click(function () {//全てのページ内リンク
 	return false;
 });
 
+// ヘッダースクロール処理
+$(function(){
+	var imgHeight = $('#mainvisual').outerHeight();
+	// ここの範囲は検討
+	var header = $('.nav-list');
+
+	$(window).on('load scroll',function(){
+		if($(window).scrollTop() < imgHeight){
+			header.removeClass('headercolor-scroll');
+		}else {
+			header.addClass('headercolor-scroll');
+		}
+	});
+});
+
+
 // ハンバーガーメニュー
 
 // ボタン部分

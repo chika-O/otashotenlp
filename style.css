@@ -2,6 +2,7 @@
 body {
     background-color:#FBFAF6;
     font-family: 'klee','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    background-image: url(images/japanese-paper_00479.jpeg);
 }
 
 /* 共通 */
@@ -22,6 +23,13 @@ section {
     z-index: -10;
 }
 
+.title {
+    font-size: 2.1875rem;
+}
+
+a {
+    text-decoration: none;
+}
 /* header部分 */
 header {
     position: absolute;
@@ -30,25 +38,54 @@ header {
     right: 0;
     z-index: 3;
     color: white;
+    position: fixed;
+    top:0;/*ポジション設定topを0*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    width: 50%;
+}
+
+.header-logo h1 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin-left: 5%;
 }
 
 header nav {
-    float: right;
     margin-right: 3%;
 }
 
 header nav ul {
     writing-mode: vertical-rl;
     list-style: none;
+    margin-top: -1rem;
 }
 
 header nav ul li {
     margin-left: 2rem;
 }
 
+header nav ul li:last-child {
+    margin-left: 0;
+}
+
 header nav a {
     text-decoration: none;
     color: white;
+    transition: color .3s;
+}
+
+header nav a:hover {
+    color: #b9ae84;
+}
+
+/* スクロール時のヘッダー背景色 */
+.headercolor-scroll {
+    background-color:rgba(31,67,79,35%);
+    padding: 1rem;
 }
 
 /* ハンバーガーメニュー */ 
@@ -239,6 +276,11 @@ button {
     margin-left: 2rem;
 }
 
+.info-text a{
+    text-decoration: none;
+    color: #333;
+}
+
 .info-text ul li {
     list-style-type: none;
     margin-bottom: 0.7rem;
@@ -261,30 +303,29 @@ button {
     color: #000;
     vertical-align: middle;
     text-decoration: none;
-    font-size: 15px;
 }
 .arrow::before,
 .arrow::after{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -8px;
     margin: auto;
     content: "";
     vertical-align: middle;
 }
 
 .arrow-style::before{
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: #1F434F;
 }
 .arrow-style::after{
-    left: 3px;
-    width: 3px;
-    height: 3px;
+    left: -3px;
+    width: 5px;
+    height: 5px;
     border-top: 1px solid #fff;
     border-right: 1px solid #fff;
     -webkit-transform: rotate(45deg);
@@ -298,13 +339,13 @@ button {
 #product-info {
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
-    margin-bottom: 25%;
+    /* height: 100vh; */
+    margin-bottom: 15%;
 }
 
 .productinfo-titlearea {
     display: flex;
-    margin-bottom: 3rem;
+    margin-bottom: 10%;
 }
 
 
@@ -319,9 +360,38 @@ button {
     margin-top: -10rem;
 }
 
-
-
 .item-list {
+    width: 57%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.item-img {
+    object-fit: contain;
+    width: 45%;
+    margin-bottom: 5%;
+}
+
+.item-text {
+    width: 45%;
+    background-color: #fff;
+    margin-bottom: 5%;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+}
+
+.item-text p {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5vw;
+}
+
+
+/* .item-list {
     width: 70%;
     display: flex;
     margin: 0 auto;
@@ -352,57 +422,102 @@ button {
 .item-text p {
     writing-mode: vertical-rl;
     text-align: right;
-}
+} */
 
-
-.view-product {
+/* ボタン */
+.viewbutton {
     text-align: center;
     font-size: 1.5rem;
 }
 
 /* shopinfo */
 #shop-info {
-    position: relative;
-    height: 100vh;
-    margin-bottom: 50%;
+    /* position: relative;
+    height: 100vh; */
+    margin-bottom: 20%;
 }
 
-.shopinfo-position {
-    position: relative;
-    height: 80%;
-    /* 100vhの80% */
-}
-
-#shop-info #koshi {
+/* #shop-info #koshi {
     position: absolute;
     top: 0;
     right: 0;
-}
+} */
 
 #shop-info h1 {
     writing-mode: vertical-rl;
     margin: 0 10% 15% auto;
+    margin-bottom: -1rem;
 }
 
-#shop-info #shopimg {
-    object-fit: contain;
-    width: 65%;
-
-}
-
-.shop-text{
+/* .shop-text{
     margin-left: 30%;
     margin-bottom: 10rem;
     width: 50%;
     max-height: 43%;
     margin-top: -2rem;
-} 
+}  */
+
+.shopinfo-main {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    
+}
+
+#shop-info #shopimg {
+    object-fit: contain;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.shop-text {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.shopinfo-map {
+    width: 50%;
+}
+
+.shopinfo-text {
+    width: 50%;
+    margin-left: 8%;
+}
+
+.shopinfo-text a {
+    color: #333;
+}
+
+.map {
+    height: 0;
+    /* overflow: hidden; */
+    padding-bottom: 75%;
+    position: relative;
+    }
+
+.map iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    }
+
 
 /* footer */
-footer {
+.footer {
     background-color: #1F434F;
+    padding: 1rem;
+}
+
+.footer-content {
     display: flex;
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 .footer-logo {
@@ -423,12 +538,31 @@ footer {
     margin: auto;
 }
 
-.footer-content {
+.footer-info {
     width: 45%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #fff;
     vertical-align: middle;
     margin: 0 auto;
+}
+
+footer a {
+    color:gray;
+    font-size: 1rem;
+    border: #fff 1px solid;
+    background: #fff;
+    padding: 0.5rem 1rem;
+}
+
+/* .mail-button {
+    font-size: 1rem;
+    border: #fff 1px solid;
+    background: #fff;
+} */
+
+.copyright {
+    color: #333;
+    text-align: center;
 }
 
 /* SP用 */
@@ -501,7 +635,7 @@ footer {
         width: 45%;
     }
 
-    .item-list {
+    /* .item-list {
         width: 80%;
         margin-bottom: 0;
     }
@@ -518,7 +652,7 @@ footer {
         width: 100%;
         max-width: none;
         top: 50%;
-    }
+    } */
 
     #shop-info {
         height: auto;
@@ -530,17 +664,21 @@ footer {
         margin-bottom: 1rem;
     }
 
-    .shop-text{
+    /* .shop-text{
         margin: 0 auto;
         margin-bottom: 3rem;
         width: 80%;
         max-height: none;
         margin-top: 0;
-    } 
+    }  */
     
-    footer {
+    .footer-content {
         flex-direction: column;
         padding: 1rem;
+    }
+
+    .footer-info {
+        width: 80%;
     }
 
     .footer-logo {
