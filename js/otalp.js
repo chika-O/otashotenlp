@@ -9,7 +9,6 @@ $('#page-link a[href*="#"]').click(function () {//全てのページ内リンク
 // ヘッダースクロール処理
 $(function(){
 	var imgHeight = $('#mainvisual').outerHeight();
-	// ここの範囲は検討
 	var header = $('.nav-list');
 
 	$(window).on('load scroll',function(){

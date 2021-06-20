@@ -256,8 +256,9 @@ button {
 
 .about-text p {
     border-left: solid 1px gray;
-    font-size: 1.9vw;
-    letter-spacing: 0.45rem;
+    font-size: 1.8vw;
+    letter-spacing: 0.42rem;
+    padding-left: 0.9vw;
     padding-left: 0.95vw;
 }
 
@@ -357,7 +358,6 @@ button {
 
 .productinfo-titlearea {
     display: flex;
-    /* margin-bottom: 10%; */
 }
 
 
@@ -559,10 +559,17 @@ footer a {
 /* SP用 */
 
 @media screen and (max-width: 768px){
+
+    #mainvisual{
+        object-fit: cover;
+        height: 83vh;
+        margin-bottom: 3rem;
+    }
+    
     /* about部分 */
     
     .textbox {
-        padding: 2rem;
+        padding: 3rem;
     }
     
     #about {
@@ -570,9 +577,15 @@ footer a {
         margin-bottom: 0;
     }
 
-    #about　h1 {
+    #about h1 {
         margin: 0 auto;
-        margin-bottom: -5rem;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-sp {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     #about .aboutimg {
@@ -585,12 +598,9 @@ footer a {
     .about-text{
         writing-mode: horizontal-tb;
         font-size: 1rem;
-        letter-spacing: normal;
-        border-left: none;
         width: 80%;
         margin: 0 auto;
         line-height: normal;
-        margin-bottom: 3rem;
     }
 
     .about-text p {
@@ -616,14 +626,28 @@ footer a {
 
     .info-text {
         width: 80%;
+        margin-bottom: 0;
     }
 
     #product-info {
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
+    }
+    
+
+    .productinfo-titlearea {
+        display: block;
     }
 
     #product-info h1 {
-        padding-top: 3rem;
+        margin: 0 auto;
+        margin-top: -10rem;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .item-list {
+        margin-top: 0;
+        margin-bottom: 3rem;
     }
 
     .item-box {
@@ -652,11 +676,18 @@ footer a {
 
 
     #shop-info {
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    #shop-info h1 {
+        margin: 0 auto;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
     }
 
     .shopinfo-main {
         width: 100%;
+        margin-top: 0;
     }
 
     #shop-info #shopimg {
@@ -676,6 +707,14 @@ footer a {
         width: 90%;
         margin-left: 0;
     }
+
+    .shopinfo-map {
+        width: 100%;
+    }
+
+    .mail-contact{
+        font-size: 1rem;
+    }
     
 
 
@@ -684,10 +723,17 @@ footer a {
     .footer-content {
         flex-direction: column;
         padding: 1rem;
+        width: 100%;
     }
 
     .footer-info {
-        width: 80%;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer a {
+        min-width: 212px;
+        font-size: 2vw;
     }
 
     .footer-logo {
@@ -695,6 +741,7 @@ footer a {
         border-right: none;
         margin: 0 auto;
         text-align: center;
+        min-width: 178px;
     }
     
     .footer-logo img {
